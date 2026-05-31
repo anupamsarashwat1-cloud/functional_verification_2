@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1780244947" />
+    <testcase name="test_boot_execution" classname="test_soc_boot" file="/home/anupam-sarashwat/functional_verification_2/software_boot/test_soc_boot.py" lineno="6" time="0.03135991096496582" sim_time_ns="0.0" ratio_time="0.0">
+      <failure error_type="AttributeError" error_msg="'NoneType' object has no attribute 'setimmediatevalue'" />
+    </testcase>
+  </testsuite>
+</testsuites>

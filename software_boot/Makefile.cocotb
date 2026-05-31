@@ -1,0 +1,29 @@
+SIM ?= icarus
+TOPLEVEL_LANG ?= verilog
+
+VERILOG_SOURCES += /home/anupam-sarashwat/Project_penguin3/common/params.vh
+VERILOG_SOURCES += /home/anupam-sarashwat/Project_penguin3/common/isa_constants.vh
+VERILOG_SOURCES += /home/anupam-sarashwat/Project_penguin3/common/isa_pkg.vh
+VERILOG_SOURCES += /home/anupam-sarashwat/Project_penguin3/common/interfaces.sv
+VERILOG_SOURCES += /home/anupam-sarashwat/Project_penguin3/backend/rv_core_top.v
+VERILOG_SOURCES += /home/anupam-sarashwat/Project_penguin3/frontend/rv_fetch.v
+VERILOG_SOURCES += /home/anupam-sarashwat/Project_penguin3/frontend/rv_decode.v
+VERILOG_SOURCES += /home/anupam-sarashwat/Project_penguin3/frontend/rv_bpu.v
+VERILOG_SOURCES += /home/anupam-sarashwat/Project_penguin3/frontend/rv_icache.v
+VERILOG_SOURCES += /home/anupam-sarashwat/Project_penguin3/backend/rv_execute.v
+VERILOG_SOURCES += /home/anupam-sarashwat/Project_penguin3/backend/rv_fpu.v
+VERILOG_SOURCES += /home/anupam-sarashwat/Project_penguin3/backend/rv_mem.v
+VERILOG_SOURCES += /home/anupam-sarashwat/Project_penguin3/backend/rv_writeback.v
+VERILOG_SOURCES += /home/anupam-sarashwat/Project_penguin3/backend/rv_mmu.v
+VERILOG_SOURCES += /home/anupam-sarashwat/Project_penguin3/backend/rv_tlb.v
+VERILOG_SOURCES += /home/anupam-sarashwat/Project_penguin3/backend/rv_ptw.v
+VERILOG_SOURCES += /home/anupam-sarashwat/Project_penguin3/backend/rv_pmp.v
+VERILOG_SOURCES += /home/anupam-sarashwat/Project_penguin3/backend/rv_dcache.v
+VERILOG_SOURCES += /home/anupam-sarashwat/Project_penguin3/common/fifo_sync.v
+
+COMPILE_ARGS += -I/home/anupam-sarashwat/Project_penguin3/common
+
+TOPLEVEL = rv_core_top
+MODULE = test_soc_boot
+
+include $(shell cocotb-config --makefiles)/Makefile.sim
